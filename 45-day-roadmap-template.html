@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>45-Day Full-Stack Developer Roadmap - Target 8 LPA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .phase-toggle {
+            transition: transform 0.3s ease;
+        }
+        .phase-header.collapsed .phase-toggle {
+            transform: rotate(180deg);
+        }
+        .progress-fill {
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+        .checklist-item.completed {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+<body class="min-h-screen bg-gray-50 p-5 font-sans">
+    <div class="max-w-6xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+        <!-- Header -->
+        <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-10 px-5 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-3">🚀 45-Day Full-Stack Developer Roadmap</h1>
+            <div class="text-xl opacity-90 mb-5">Target: 8 LPA | JavaScript → Frontend → Backend → Project → DSA → Interview</div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+                <div class="bg-white bg-opacity-10 backdrop-blur rounded-lg p-4 text-center">
+                    <div class="text-3xl font-bold text-yellow-300">45</div>
+                    <div class="text-sm">Total Days</div>
+                </div>
+                <div class="bg-white bg-opacity-10 backdrop-blur rounded-lg p-4 text-center">
+                    <div class="text-3xl font-bold text-yellow-300">6</div>
+                    <div class="text-sm">Phases</div>
+                </div>
+                <div class="bg-white bg-opacity-10 backdrop-blur rounded-lg p-4 text-center">
+                    <div class="text-3xl font-bold text-yellow-300">5-6</div>
+                    <div class="text-sm">Hours/Day</div>
+                </div>
+                <div class="bg-white bg-opacity-10 backdrop-blur rounded-lg p-4 text-center">
+                    <div class="text-3xl font-bold text-yellow-300">8</div>
+                    <div class="text-sm">LPA Target</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Tracker -->
+        <div class="bg-gray-50 p-6 m-5 rounded-lg border-2 border-gray-200">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">📊 Overall Progress</h3>
+            <div class="bg-gray-200 h-5 rounded-full overflow-hidden mb-3">
+                <div class="progress-fill bg-gradient-to-r from-green-400 to-green-600 h-full" id="overallProgress"></div>
+            </div>
+            <div id="progressText" class="text-gray-700 font-medium">Day 1 of 45 - Let's start the journey! 💪</div>
+        </div>
+
+        <!-- Time Guidelines -->
+        <div class="bg-blue-50 border-l-4 border-blue-400 p-5 m-5 rounded-md">
+            <h3 class="text-lg font-semibold text-gray-800 mb-3">⏰ Daily Time Guidelines</h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                <li><strong>Weekdays:</strong> 5–6 hours/day</li>
+                <li><strong>Weekends:</strong> 6–8 hours/day</li>
+                <li><strong>Average:</strong> 5.5 hours/day baseline</li>
+                <li><strong>Important:</strong> JavaScript पहले — Day 1–10 pure JS core + practice</li>
+            </ul>
+        </div>
+
+        <!-- Phase A: Core JavaScript -->
+        <div class="border border-gray-200 rounded-lg shadow-md m-5 overflow-hidden border-l-4 border-l-red-500" data-phase="1">
+            <div class="bg-blue-600 hover:bg-blue-700 text-white p-5 cursor-pointer transition-all duration-300 flex justify-between items-center" onclick="togglePhase(1)">
+                <h2 class="text-xl font-semibold">Phase A - Days 1–10: Core JavaScript (Mandatory)</h2>
+                <span class="phase-toggle text-2xl">▼</span>
+            </div>
+            <div class="phase-content p-5">
+                <p class="text-gray-700 mb-4"><strong>Daily time:</strong> 4–5 hours | <strong>Goal:</strong> Bina notes ke JS fundamentals aur patterns likh pao</p>
+                
+                <div class="bg-gray-50 p-4 rounded-lg my-4">
+                    <h4 class="text-gray-800 font-semibold mb-3">📚 Must-Learn Topics (Priority Order):</h4>
+                    <ol>
+                        <li>Basics & syntax: variables, types, operators, functions (hoisting), scope</li>
+                        <li>let/const vs var, arrow functions, default params</li>
+                        <li><span class="bg-green-200 px-2 py-1 rounded text-green-800">Closures & lexical scope</span> (practice 5 blind examples)</li>
+                        <li>Prototype, prototype chain, ES6 classes</li>
+                        <li><span class="bg-green-200 px-2 py-1 rounded text-green-800">this</span> — different call contexts (call, apply, bind)</li>
+                        <li>Array methods: map, filter, reduce, find, forEach, sort (implementation coding)</li>
+                        <li>Objects: spread/rest, destructuring, computed props</li>
+                        <li>Modules: import/export (ESM), bundlers concept</li>
+                        <li><span class="bg-green-200 px-2 py-1 rounded text-green-800">Async JS:</span> callbacks, promises, async/await, error handling</li>
+                        <li>Event loop, microtasks vs macrotasks, setTimeout, promise microtask demo</li>
+                        <li>Fetch API, axios basics</li>
+                        <li>Error handling patterns, try/catch, throwing errors</li>
+                        <li>Performance patterns: debouncing, throttling (implement both)</li>
+                        <li>DOM basics: querySelector, events, delegation</li>
+                        <li>Tooling: npm init, package.json basics, scripts, nodemon</li>
+                    </ol>
+                </div>
+
+                <div class="bg-yellow-50 border border-yellow-200 p-4 rounded-lg my-4">
+                    <h4 class="text-gray-800 font-semibold mb-3">📋 Daily Tasks Template:</h4>
+                    <ul>
+                        <li>60–90 min: Read/recap + 3 mini examples</li>
+                        <li>60–90 min: Blind coding practice (no Google) — implement 5 problems</li>
+                        <li>30–60 min: Mini challenge on CodeRunner/LeetCode (easy)</li>
+                        <li>30 min: Notes + mistakes log</li>
+                    </ul>
+                </div>
+
+                <div class="bg-blue-50 border border-blue-200 p-4 rounded-lg my-4">
+                    <h4 class="text-blue-800 font-semibold mb-3">🎯 Deliverables by Day 10:</h4>
+                    <ul>
+                        <li>10 blind-coded mini-scripts (one per day) saved in a repo</li>
+                        <li>1 small utility library file (array-utils.js) with map/filter/reduce helpers</li>
+                        <li>Short README with "how I debugged closures & event loop"</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Phase B: Frontend -->
+        <div class="border border-gray-200 rounded-lg shadow-md m-5 overflow-hidden border-l-4 border-l-orange-500" data-phase="2">
+            <div class="bg-blue-600 hover:bg-blue-700 text-white p-5 cursor-pointer transition-all duration-300 flex justify-between items-center" onclick="togglePhase(2)">
+                <h2 class="text-xl font-semibold">Phase B - Days 11–18: Frontend (React + Tailwind)</h2>
+                <span class="phase-toggle text-2xl">▼</span>
+            </div>
+            <div class="phase-content p-5">
+                <p class="text-gray-700 mb-4"><strong>Daily time:</strong> 5–6 hours | <strong>Goal:</strong> React fundamentals + building UI components from scratch</p>
+                
+                <div class="bg-gray-50 p-4 rounded-lg my-4">
+                    <h4 class="text-gray-800 font-semibold mb-3">📚 Must-Learn Topics:</h4>
+                    <ol>
+                        <li>React basics: components, props, state (useState)</li>
+                        <li>Lifecycle hooks: useEffect (data fetch, cleanup)</li>
+                        <li>Forms & controlled components</li>
+                        <li>Lists & keys</li>
+                        <li>Context API (basic auth context)</li>
+                        <li>React Router (routing + protected routes)</li>
+                        <li>State management patterns (lifting state, useReducer)</li>
+                        <li>Performance: memo, useMemo, useCallback</li>
+                        <li>Styling: Tailwind basics + responsive classes</li>
+                        <li>Accessibility basics (aria-label, semantic tags)</li>
+                        <li>Fetching: axios/fetch + handling errors/loading</li>
+                        <li>Build: Vite or Create React App, environment variables</li>
+                    </ol>
+                </div>
+
+                <div class="daily-tasks">
+                    <h4>📋 Daily Tasks Examples:</h4>
+                    <ul>
+                        <li><strong>Day 11–13:</strong> Components + state + forms (counter, todo, search, form validation)</li>
+                        <li><strong>Day 14–15:</strong> API integration (useEffect) + list rendering + pagination mock</li>
+                        <li><strong>Day 16:</strong> Routing + protected route + auth context stub</li>
+                        <li><strong>Day 17:</strong> Styling: Tailwind layout for small dashboard components</li>
+                        <li><strong>Day 18:</strong> Small UI polish + deploy frontend skeleton to Vercel</li>
+                    </ul>
+                </div>
+
+                <div class="bg-blue-50 border border-blue-200 p-4 rounded-lg my-4">
+                    <h4 class="text-blue-800 font-semibold mb-3">🎯 Deliverables by Day 18:</h4>
+                    <ul>
+                        <li>Small React app with: Login page (mock), Product list, Add Product form</li>
+                        <li>Deployed frontend to Vercel (demo link)</li>
+                        <li>Component library folder (Button, Input, Modal) reusable</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Phase C: Backend -->
+        <div class="border border-gray-200 rounded-lg shadow-md m-5 overflow-hidden border-l-4 border-l-green-500" data-phase="3">
+            <div class="bg-blue-600 hover:bg-blue-700 text-white p-5 cursor-pointer transition-all duration-300 flex justify-between items-center" onclick="togglePhase(3)">
+                <h2 class="text-xl font-semibold">Phase C - Days 19–26: Backend + DB + ORM (Node, Express, MySQL)</h2>
+                <span class="phase-toggle text-2xl">▼</span>
+            </div>
+            <div class="phase-content p-5">
+                <p class="text-gray-700 mb-4"><strong>Daily time:</strong> 5–6 hours | <strong>Goal:</strong> Production-like backend: models, controllers, routes, auth</p>
+                
+                <div class="bg-gray-50 p-4 rounded-lg my-4">
+                    <h4 class="text-gray-800 font-semibold mb-3">📚 Must-Learn Topics:</h4>
+                    <ol>
+                        <li>Node.js basics: modules, npm scripts, environment variables</li>
+                        <li>Express: routing, middleware, error handling</li>
+                        <li>Body parsing, CORS config, input validation (Joi or express-validator)</li>
+                        <li>MySQL basics: schemas, joins, indices, transactions (conceptual)</li>
+                        <li>Sequelize ORM: define models, migrations, associations</li>
+                        <li>CRUD controllers + pagination + searching</li>
+                        <li><span class="bg-green-200 px-2 py-1 rounded text-green-800">Authentication:</span> bcrypt, JWT tokens, refresh token flow</li>
+                        <li>Protected routes middleware, role-based access (admin/user)</li>
+                        <li>Logging (morgan/winston) and security headers (helmet)</li>
+                        <li>Testing endpoints via Postman / Insomnia</li>
+                        <li>Environment & deployment basics (Render/Heroku)</li>
+                    </ol>
+                </div>
+
+                <div class="daily-tasks">
+                    <h4>📋 Daily Tasks Examples:</h4>
+                    <ul>
+                        <li><strong>Day 19–20:</strong> Setup Express app + 3 routes: /, /login, /users</li>
+                        <li><strong>Day 21–22:</strong> Sequelize models (User, Product, Purchase, Sale) + associations</li>
+                        <li><strong>Day 23:</strong> CRUD controllers for Product + routes</li>
+                        <li><strong>Day 24:</strong> Auth: register/login, hash password, JWT issue, protected route</li>
+                        <li><strong>Day 25:</strong> Low-stock alert logic + simple analytics endpoints</li>
+                        <li><strong>Day 26:</strong> Deploy backend to Render and test with frontend</li>
+                    </ul>
+                </div>
+
+                <div class="bg-blue-50 border border-blue-200 p-4 rounded-lg my-4">
+                    <h4 class="text-blue-800 font-semibold mb-3">🎯 Deliverables by Day 26:</h4>
+                    <ul>
+                        <li>Backend repo with models, controllers, auth</li>
+                        <li>Deployed API with Postman collection</li>
+                        <li>README with API docs (endpoints + sample requests)</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-50 p-4 rounded-lg my-4">
+                    <h4 class="text-gray-800 font-semibold mb-3">🗄️ Minimal DB Schema:</h4>
+                    <ul>
+                        <li><strong>User:</strong> {id, name, email(unique), passwordHash, role, createdAt}</li>
+                        <li><strong>Product:</strong> {id, name, sku, price, stock, createdAt}</li>
+                        <li><strong>Purchase:</strong> {id, productId, qty, price, supplier, date}</li>
+                        <li><strong>Sale:</strong> {id, productId, qty, price, customer, date}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Phase D: Portfolio Project -->
+        <div class="border border-gray-200 rounded-lg shadow-md m-5 overflow-hidden border-l-4 border-l-purple-500" data-phase="4">
+            <div class="bg-blue-600 hover:bg-blue-700 text-white p-5 cursor-pointer transition-all duration-300 flex justify-between items-center" onclick="togglePhase(4)">
+                <h2 class="text-xl font-semibold">Phase D - Days 27–33: Portfolio Project "Smart Inventory + Billing"</h2>
+                <span class="phase-toggle text-2xl">▼</span>
+            </div>
+            <div class="phase-content p-5">
+                <p class="text-gray-700 mb-4"><strong>Daily time:</strong> 6–7 hours | <strong>Goal:</strong> Full integration — end-to-end feature-complete MVP</p>
+                
+                <div class="bg-gray-50 p-4 rounded-lg my-4">
+                    <h4 class="text-gray-800 font-semibold mb-3">🚀 Core Features to Implement:</h4>
+                    <ul>
+                        <li>Signup/Login (JWT) + Role-based UI (admin vs user)</li>
+                        <li>Add/Edit/Delete Product</li>
+                        <li>Create Purchase & Create Sale (updates stock)</li>
+                        <li>Low-stock alerts (dashboard widget)</li>
+                        <li>Simple analytics: daily sales, monthly profit + charts</li>
+                        <li>Invoice generation (basic PDF or printable page)</li>
+                        <li>Deploy frontend (Vercel) + backend (Render) + env secrets</li>
+                    </ul>
+                </div>
+
+                <div class="bg-yellow-50 border border-yellow-200 p-4 rounded-lg my-4">
+                    <h4 class="text-gray-800 font-semibold mb-3">📋 Day-by-Day Breakdown:</h4>
+                    <ul>
+                        <li><strong>Day 27:</strong> Wireframe + routes + folder structure (frontend + backend)</li>
+                        <li><strong>Day 28–29:</strong> Implement Add Product + list + stock update</li>
+                        <li><strong>Day 30:</strong> Implement Purchase flow + stock increase</li>
+                        <li><strong>Day 31:</strong> Implement Sales flow + stock decrease + invoice view</li>
+                        <li><strong>Day 32:</strong> Analytics endpoints + client charts</li>
+                        <li><strong>Day 33:</strong> Polish + end-to-end test + final deploy + portfolio README</li>
+                    </ul>
+                </div>
+
+                <div class="deliverables">
+                    <h4>🎯 Deliverables:</h4>
+                    <ul>
+                        <li>Live project links (frontend + backend)</li>
+                        <li>Portfolio-ready README + feature screenshots</li>
+                        <li>Short video (1–2 min) demo to include in LinkedIn</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Phase E: DSA -->
+        <div class="border border-gray-200 rounded-lg shadow-md m-5 overflow-hidden border-l-4 border-l-teal-500" data-phase="5">
+            <div class="bg-blue-600 hover:bg-blue-700 text-white p-5 cursor-pointer transition-all duration-300 flex justify-between items-center" onclick="togglePhase(5)">
+                <h2 class="text-xl font-semibold">Phase E - Days 34–40: DSA Focus + System Design Basics</h2>
+                <span class="phase-toggle text-2xl">▼</span>
+            </div>
+            <div class="phase-content p-5">
+                <p class="text-gray-700 mb-4"><strong>Daily time:</strong> 4–5 hours practice + 1 hour revision</p>
+                
+                <div class="bg-gray-50 p-4 rounded-lg my-4">
+                    <h4 class="text-gray-800 font-semibold mb-3">🧮 DSA Topics (30 problems total):</h4>
+                    <ul>
+                        <li><strong>Arrays:</strong> sliding window, two pointers, subarray sums (6 problems)</li>
+                        <li><strong>Strings:</strong> frequency, reverse, palindrome, anagrams (5 problems)</li>
+                        <li><strong>HashMap/Set:</strong> frequency counting, grouping (4 problems)</li>
+                        <li><strong>Sorting & Searching:</strong> custom sort logic, binary search (3 problems)</li>
+                        <li><strong>Linked Lists / Trees:</strong> basics if asked (3 problems)</li>
+                        <li><strong>Async/Promise logic:</strong> pitfalls (2 problems — design + explain)</li>
+                        <li><strong>Complexity analysis:</strong> optimization (2 problems)</li>
+                        <li><strong>Debugging:</strong> reproduce bug + fix (use real project bug)</li>
+                    </ul>
+                </div>
+
+                <div class="bg-yellow-50 border border-yellow-200 p-4 rounded-lg my-4">
+                    <h4 class="text-gray-800 font-semibold mb-3">📋 System Design Mini-Topics:</h4>
+                    <ul>
+                        <li>End-to-end Authentication (register/login, JWT, refresh tokens)</li>
+                        <li>Folder structure for scaling Express apps</li>
+                        <li>Scaling Express: horizontal scaling, load balancer, DB read replicas</li>
+                        <li>WebSockets vs MQTT (use cases, when to choose what)</li>
+                    </ul>
+                </div>
+
+                <div class="bg-blue-50 border border-blue-200 p-4 rounded-lg my-4">
+                    <h4 class="text-blue-800 font-semibold mb-3">🎯 Deliverables:</h4>
+                    <ul>
+                        <li>30 solved problems (repo or doc links)</li>
+                        <li>4 system-design one-pagers ready to explain in interviews</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Phase F: Interview Prep -->
+        <div class="border border-gray-200 rounded-lg shadow-md m-5 overflow-hidden border-l-4 border-l-gray-600" data-phase="6">
+            <div class="bg-blue-600 hover:bg-blue-700 text-white p-5 cursor-pointer transition-all duration-300 flex justify-between items-center" onclick="togglePhase(6)">
+                <h2 class="text-xl font-semibold">Phase F - Days 41–45: Interview Cracking + Resume + Applications</h2>
+                <span class="phase-toggle text-2xl">▼</span>
+            </div>
+            <div class="phase-content p-5">
+                <p class="text-gray-700 mb-4"><strong>Daily time:</strong> 4–6 hours (mock interviews + applying)</p>
+                
+                <div class="bg-yellow-50 border border-yellow-200 p-4 rounded-lg my-4">
+                    <h4 class="text-gray-800 font-semibold mb-3">📋 Daily Tasks:</h4>
+                    <ul>
+                        <li><strong>Day 41:</strong> Resume polish + optimization for Full-Stack roles (1-page + project bullets)</li>
+                        <li><strong>Day 42:</strong> LinkedIn profile update + 1 post about project + demo video</li>
+                        <li><strong>Day 43:</strong> Mock interviews — 2 rounds: Tech + System Design</li>
+                        <li><strong>Day 44:</strong> Common interview Qs: Tell me about yourself, project explanation, Auth flow, useEffect, event loop</li>
+                        <li><strong>Day 45:</strong> Apply aggressively (40–60/day) — React Developer, Node Developer, Full Stack, IoT Software Dev</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-50 p-4 rounded-lg my-4">
+                    <h4 class="text-gray-800 font-semibold mb-3">💼 Where to Apply:</h4>
+                    <ul>
+                        <li>LinkedIn, Naukri, Hirect, Foundit, AngelList</li>
+                        <li>Company career pages</li>
+                        <li>Use saved cover templates + customize 2 lines per job</li>
+                    </ul>
+                </div>
+
+                <div class="deliverables">
+                    <h4>🎯 Deliverables:</h4>
+                    <ul>
+                        <li>Final resume PDF, LinkedIn live post</li>
+                        <li>List of 100 targeted companies + roles applied with dates</li>
+                        <li>10 mock-interview recordings/notes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Daily Routine Template -->
+        <div class="bg-blue-50 border-l-4 border-blue-400 p-5 m-5 rounded-md">
+            <h3 class="text-lg font-semibold text-gray-800 mb-3">🕐 Daily Routine Template (Ideal Day)</h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                <li><strong>08:00–09:30</strong> — JS core / Concept learning (fresh brain)</li>
+                <li><strong>09:45–11:45</strong> — Main task block (coding: feature / backend / DSA)</li>
+                <li><strong>12:00–12:30</strong> — Short break + review notes</li>
+                <li><strong>12:30–14:00</strong> — Secondary task (UI polish / tests / small practice)</li>
+                <li><strong>14:00–15:00</strong> — Review, commit, write daily log (what went well / blocked)</li>
+            </ul>
+            <p class="text-gray-600 italic mt-3">Adjust for personal schedule; on weekends increase blocks for deep work</p>
+        </div>
+
+        <!-- Priority Checklist -->
+        <div class="bg-white p-5 m-5 rounded-lg shadow-md">
+            <h3 class="text-lg font-semibold text-gray-800 mb-4">✅ Priority Checklist (Must-have by Day 45)</h3>
+            <div class="flex items-center p-3 border-b border-gray-200 hover:bg-gray-50 transition-all duration-300">
+                <input type="checkbox" id="js-fundamentals" onchange="updateProgress()" class="mr-4 transform scale-125">
+                <label for="js-fundamentals" class="text-gray-700">Solid JS fundamentals + 10 blind scripts</label>
+            </div>
+            <div class="flex items-center p-3 border-b border-gray-200 hover:bg-gray-50 transition-all duration-300">
+                <input type="checkbox" id="react-app" onchange="updateProgress()" class="mr-4 transform scale-125">
+                <label for="react-app" class="text-gray-700">React app with routing, protected routes, context</label>
+            </div>
+            <div class="flex items-center p-3 border-b border-gray-200 hover:bg-gray-50 transition-all duration-300">
+                <input type="checkbox" id="backend-auth" onchange="updateProgress()" class="mr-4 transform scale-125">
+                <label for="backend-auth" class="text-gray-700">Backend with JWT auth and Sequelize models</label>
+            </div>
+            <div class="flex items-center p-3 border-b border-gray-200 hover:bg-gray-50 transition-all duration-300">
+                <input type="checkbox" id="portfolio-project" onchange="updateProgress()" class="mr-4 transform scale-125">
+                <label for="portfolio-project" class="text-gray-700">Deployed portfolio project working end-to-end</label>
+            </div>
+            <div class="flex items-center p-3 border-b border-gray-200 hover:bg-gray-50 transition-all duration-300">
+                <input type="checkbox" id="dsa-problems" onchange="updateProgress()" class="mr-4 transform scale-125">
+                <label for="dsa-problems" class="text-gray-700">30 DSA problems solved and system-design notes</label>
+            </div>
+            <div class="flex items-center p-3 hover:bg-gray-50 transition-all duration-300">
+                <input type="checkbox" id="resume-applications" onchange="updateProgress()" class="mr-4 transform scale-125">
+                <label for="resume-applications" class="text-gray-700">Resume + LinkedIn updated + 100+ applications list started</label>
+            </div>
+        </div>
+
+        <!-- Tools Cheatsheet -->
+        <div class="bg-gray-800 text-white p-5 m-5 rounded-lg font-mono">
+            <h3 class="text-lg font-semibold mb-4 text-blue-400">🔧️ Quick Tools & Commands Cheat-Sheet</h3>
+            <div class="bg-blue-900 bg-opacity-30 p-2 rounded border-l-2 border-blue-400 my-2">Init project: npm init -y</div>
+            <div class="bg-blue-900 bg-opacity-30 p-2 rounded border-l-2 border-blue-400 my-2">Install Express: npm i express</div>
+            <div class="bg-blue-900 bg-opacity-30 p-2 rounded border-l-2 border-blue-400 my-2">Dev server: nodemon src/index.js</div>
+            <div class="bg-blue-900 bg-opacity-30 p-2 rounded border-l-2 border-blue-400 my-2">Sequelize start: npx sequelize-cli init</div>
+            <div class="bg-blue-900 bg-opacity-30 p-2 rounded border-l-2 border-blue-400 my-2">Run migrations: npx sequelize-cli db:migrate</div>
+            <div class="bg-blue-900 bg-opacity-30 p-2 rounded border-l-2 border-blue-400 my-2">React Vite: npm create vite@latest myapp --template react</div>
+            <div class="bg-blue-900 bg-opacity-30 p-2 rounded border-l-2 border-blue-400 my-2">Deploy frontend: Vercel (git push, connect repo)</div>
+            <div class="bg-blue-900 bg-opacity-30 p-2 rounded border-l-2 border-blue-400 my-2">Deploy backend: Render / Railway / Heroku</div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="text-center py-5">
+            <button class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-md mx-2 my-1 transition-all duration-300 transform hover:-translate-y-1" onclick="resetProgress()">🔄 Reset Progress</button>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-md mx-2 my-1 transition-all duration-300 transform hover:-translate-y-1" onclick="exportProgress()">💾 Export Progress</button>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-md mx-2 my-1 transition-all duration-300 transform hover:-translate-y-1" onclick="printRoadmap()">🖨️ Print Roadmap</button>
+        </div>
+
+        <!-- Footer -->
+        <div class="bg-gray-800 text-white py-8 px-5 text-center">
+            <h3 class="text-xl font-semibold mb-3">🎯 Ready to Start Your Journey?</h3>
+            <p class="mb-2">This roadmap is your step-by-step guide to becoming a Full-Stack Developer targeting 8 LPA</p>
+            <p class="mb-2"><strong>Remember:</strong> Consistency > Perfection. Code every day, build projects, and never stop learning! 🚀</p>
+            <p class="text-gray-300 italic">Created with ❤️ for aspiring developers</p>
+        </div>
+    </div>
+
+    <script>
+        // Progress tracking
+        function updateProgress() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const checked = document.querySelectorAll('input[type="checkbox"]:checked').length;
+            const total = checkboxes.length;
+            const percentage = (checked / total) * 100;
+            
+            document.getElementById('overallProgress').style.width = percentage + '%';
+            document.getElementById('progressText').textContent = 
+                `Progress: ${checked}/${total} milestones completed (${Math.round(percentage)}%)`;
+            
+            // Save progress to localStorage
+            const progress = {};
+            checkboxes.forEach(checkbox => {
+                progress[checkbox.id] = checkbox.checked;
+            });
+            localStorage.setItem('roadmapProgress', JSON.stringify(progress));
+            
+            // Update checklist item styling
+            checkboxes.forEach(checkbox => {
+                const item = checkbox.closest('.checklist-item');
+                if (checkbox.checked) {
+                    item.classList.add('completed');
+                } else {
+                    item.classList.remove('completed');
+                }
+            });
+        }
+
+        // Load saved progress
+        function loadProgress() {
+            const saved = localStorage.getItem('roadmapProgress');
+            if (saved) {
+                const progress = JSON.parse(saved);
+                Object.keys(progress).forEach(id => {
+                    const checkbox = document.getElementById(id);
+                    if (checkbox) {
+                        checkbox.checked = progress[id];
+                    }
+                });
+                updateProgress();
+            }
+        }
+
+        // Reset progress
+        function resetProgress() {
+            if (confirm('Are you sure you want to reset all progress?')) {
+                localStorage.removeItem('roadmapProgress');
+                document.querySelectorAll('.checklist input[type="checkbox"]').forEach(cb => {
+                    cb.checked = false;
+                });
+                updateProgress();
+            }
+        }
+
+        // Export progress
+        function exportProgress() {
+            const progress = localStorage.getItem('roadmapProgress');
+            if (progress) {
+                const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(progress);
+                const downloadAnchorNode = document.createElement('a');
+                downloadAnchorNode.setAttribute("href", dataStr);
+                downloadAnchorNode.setAttribute("download", "roadmap-progress.json");
+                document.body.appendChild(downloadAnchorNode);
+                downloadAnchorNode.click();
+                downloadAnchorNode.remove();
+            }
+        }
+
+        // Print roadmap
+        function printRoadmap() {
+            window.print();
+        }
+
+        // Phase toggle functionality
+        function togglePhase(phaseNumber) {
+            const phase = document.querySelector(`[data-phase="${phaseNumber}"]`);
+            const content = phase.querySelector('.phase-content');
+            const header = phase.querySelector('.phase-header');
+            
+            if (content.classList.contains('collapsed')) {
+                content.classList.remove('collapsed');
+                header.classList.remove('collapsed');
+            } else {
+                content.classList.add('collapsed');
+                header.classList.add('collapsed');
+            }
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadProgress();
+            
+            // Animate progress bar on load
+            setTimeout(() => {
+                updateProgress();
+            }, 500);
+        });
+    </script>
+</body>
+</html>
